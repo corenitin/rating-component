@@ -11,8 +11,7 @@ const spans = [];
 
 ratings.map((rate) => {
   const span = document.createElement("span");
-  ratingNumbers.appendChild(span);
-  spans.push(span);
+  
 
   //style
   span.style.fontFamily = "'Overpass', sans-serif";
@@ -49,6 +48,9 @@ ratings.map((rate) => {
       } 
     });
   });
+
+  ratingNumbers.appendChild(span);
+  spans.push(span);
 });
 
 function submit() {
