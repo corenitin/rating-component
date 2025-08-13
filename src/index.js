@@ -50,7 +50,7 @@ ratings.map((rate) => {
   });
 
   ratingNumbers.appendChild(span);
-  spans.push(span);
+  spans.push(span); 
 });
 
 function submit() {
