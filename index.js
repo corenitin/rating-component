@@ -11,7 +11,6 @@ const spans = [];
 
 ratings.map((rate) => {
   const span = document.createElement("span");
-  
 
   //style
   span.style.fontFamily = "'Overpass', sans-serif";
@@ -41,20 +40,20 @@ ratings.map((rate) => {
   span.addEventListener("click", () => {
     givenRate = rate;
     // Update all span styles based on selected rating
-    spans.forEach((span, i) => {
-      if (ratings[i] <= givenRate) {
-        span.style.backgroundColor = "hsl(0, 100%, 100%)";
-        span.style.color = "hsl(213, 19%, 18%)";
-      } 
+    spans.forEach((s) => {
+      s.style.backgroundColor = "hsl(213, 19%, 18%)";
+      s.style.color = "hsl(217, 12%, 63%)";
     });
+    span.style.backgroundColor = "hsl(0, 100%, 100%)"; 
+    span.style.color = "hsl(213, 19%, 18%)";
   });
 
   ratingNumbers.appendChild(span);
-  spans.push(span); 
+  spans.push(span);
 });
 
 function submit() {
   ratingComponent.style.display = "none";
   thankYouComponent.style.display = "block";
-  selectedRatingSpan.textContent = givenRate;   
+  selectedRatingSpan.textContent = givenRate;
 }
